@@ -16,6 +16,6 @@ export const fontSize = {
   }
 
   export const fontFamily = {
-     heading: "Clash Display, sans-serif",
+     heading: "ClashDisplay, sans-serif",
      secondary: "Poppins, sans-serif"
     }
