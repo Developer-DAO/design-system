@@ -1,6 +1,6 @@
 import "../src/styles.css";
-
-export const parameters = {
+import d_d_theme from "./d_d_theme";
+const preview = {
 	actions: { argTypesRegex: "^on[A-Z].*" },
 	controls: {
 		matchers: {
@@ -8,15 +8,18 @@ export const parameters = {
 			date: /Date$/,
 		},
 	},
-	darkMode: {
-		darkClass: "dark",
-		stylePreview: true,
-	},
-	backgrounds: {
-		values: [
-			{ name: "d_d_dark", value: "#1f2938" },
-			{ name: "d_d_light", value: "#ffffff" },
-			{ name: "d_d_gray", value: "#fafafa" },
-		],
+	parameters: {
+		docs: {
+			theme: d_d_theme,
+		},
+		backgrounds: {
+			values: [
+				{ name: "dark", value: "#000" },
+				{ name: "white", value: "#ffffff" },
+			],
+			default: "dark",
+		},
 	},
 };
+
+export default preview;

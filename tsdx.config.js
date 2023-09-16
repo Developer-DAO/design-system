@@ -1,6 +1,7 @@
 const postcss = require("rollup-plugin-postcss");
 const svgr = require("@svgr/rollup");
 const url = require("@rollup/plugin-url");
+const copy = require("rollup-plugin-copy");
 
 module.exports = {
 	// This function will run for each entry/format/env combination
@@ -27,12 +28,19 @@ module.exports = {
 				// publicPath: '/static/', // Adjust the public path as needed
 			}),
 		);
+		config.plugins.push(
+			copy({
+				targets: [{ src: "src/fonts/*", dest: "dist/fonts" }],
+				hook: "writeBundle", // ensure the copy is done at the end of bundling process
+			}),
+		);
 		// Add the image plugin
 		// config.plugins.push(
 		//   img({
 		//     limit: 10000, // Limit for data URLs. Files larger than this will be imported as file URLs.
 		//   })
 		// );
+
 		return config; // always return a config.
 	},
 };

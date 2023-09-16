@@ -1,12 +1,12 @@
-import React, { useState } from "react";
 import cx from "classnames";
-
+import React, { useState } from "react";
 import Spinner from "./Spinner";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	label?: string;
 	size?: "medium" | "small" | "compact";
 	border?: string;
+	variant?: "primary" | "secondary";
 	disabled?: boolean;
 	loading?: boolean;
 }
@@ -14,8 +14,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 const Button: React.FC<ButtonProps> = ({
 	label,
 	children,
-	border = "primary-blue-600",
+	border = "primary-white",
 	size = "medium",
+	variant = "primary",
 	disabled = false,
 	loading = false,
 	className,
@@ -28,13 +29,31 @@ const Button: React.FC<ButtonProps> = ({
 		"h-10 px-4 text-sm": size === "small",
 		"h-8 px-2 text-xs": size === "compact",
 	});
-	const styleClass = cx({
-		"bg-neutral-200 text-neutral-400": disabled,
-		[`border-2 border-${border} bg-neutral-100 text-neutral-800`]: !disabled,
-	});
+
+	const textColor =
+		variant === "primary"
+			? "text-primary-black"
+			: variant === "secondary"
+			? `text-neutral-500 hover:text-primary-white`
+			: "text-neutral-600"; // Conditional text color
+
+	const borderColorClasses =
+		variant === "primary"
+			? "border-primary-white"
+			: variant === "secondary"
+			? `border-neutral-500 hover:border-primary-white`
+			: "border-neutral-600"; // Conditional text color
+
+	const backgroundColorClasses =
+		variant === "primary"
+			? "bg-primary-white"
+			: variant === "secondary"
+			? `bg-neutral-700 hover:bg-neutral-700`
+			: "bg-neutral-600"; // Conditional text color
+
 	const effectClass = cx({
-		"shadow-sm": !disabled && !isPressed,
-		"hover:shadow-md": !isPressed && !disabled && !loading,
+		"shadow-sm": variant === "primary" && !disabled && !isPressed,
+		"hover:shadow-lg": variant === "primary" && !isPressed && !disabled && !loading,
 		"cursor-default": !disabled && loading,
 		"cursor-not-allowed": disabled,
 	});
@@ -42,10 +61,13 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			className={cx(
-				"flex items-center justify-center w-fit rounded-full gap-2 transition-all",
+				"flex items-center justify-center w-fit rounded-full gap-2 transition-all border-2",
 				sizeClass,
-				styleClass,
+				textColor,
+				borderColorClasses,
+				backgroundColorClasses,
 				effectClass,
+				disabled && "opacity-50",
 				className,
 			)}
 			onMouseDown={() => setIsPressed(true)}

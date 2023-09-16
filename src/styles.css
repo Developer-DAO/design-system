@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 /* ClashDisplay Font */
-@import "./fonts/ClashDisplay/css/clash-display.css";
+/* @import "./fonts/css/clash-display.css"; */
 /* Poppins Font */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
@@ -19,4 +19,34 @@
     table, th, td, caption {
       @apply font-secondary;
     }
+  }
+
+  @font-face {
+    font-family: 'ClashDisplay';
+  
+    src: url('./fonts/ClashDisplay-Variable.woff2') format('woff2'),
+         url('./fonts/ClashDisplay-Variable.woff') format('woff'),
+         url('./fonts/ClashDisplay-Variable.ttf') format('truetype');
+    font-weight: 200 700; /* This covers the variable range */
+  
+    src: url('./fonts/ClashDisplay-Extralight.woff2') format('woff2');
+    font-weight: 200;
+  
+    src: url('./fonts/ClashDisplay-Light.woff2') format('woff2');
+    font-weight: 300;
+  
+    src: url('./fonts/ClashDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+  
+    src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
+  
+    src: url('./fonts/ClashDisplay-Semibold.woff2') format('woff2');
+    font-weight: 600;
+  
+    src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+  
+    font-display: swap;
+    font-style: normal;
   }

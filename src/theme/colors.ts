@@ -10,7 +10,7 @@ export const colors = {
         800: "#2f2f2f"
     },
     "primary": {
-        "black": "000",
+        "black": "#000",
         "grey": "rgba(189, 189, 192, 1)",
         "white": "rgba(221, 221, 221, 1)",
     },
