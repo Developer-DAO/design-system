@@ -3,8 +3,8 @@ import theme, { colorClasses, variantColorClasses } from './src/theme';
 
 const config: Config = {
 	content: [
-		"./src/components/**/*.{js,ts,jsx,tsx}",
-		"./stories/**/*.{js,ts,jsx,tsx}",
+		"./src/**/*.{js,ts,jsx,tsx,md,mdx}",
+		// "./stories/**/*.{js,ts,jsx,tsx,md,mdx}",
 	],
 	/* Avoid using patterns here as it will break the build */
 	safelist: [

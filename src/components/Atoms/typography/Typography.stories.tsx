@@ -24,5 +24,6 @@ export const TypographyShowcase = () => (
 		<Body1>Body 1 - Regular text</Body1>
 		<Body2>Body 2 - Smaller text</Body2>
 		<Body3>Body 3 - Even smaller text</Body3>
+		<Body3>Body 3 - Even smaller text</Body3>
 	</div>
 );

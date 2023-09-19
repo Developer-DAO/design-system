@@ -1,52 +1,63 @@
+
+@font-face {
+  font-family: 'ClashDisplay';
+
+  src: url('./fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('./fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('./fonts/ClashDisplay-Variable.ttf') format('truetype');
+  font-weight: 200 700; /* This covers the variable range */
+
+  src: url('./fonts/ClashDisplay-Extralight.woff2') format('woff2');
+  font-weight: 200;
+
+  src: url('./fonts/ClashDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+
+  src: url('./fonts/ClashDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+
+  src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+
+  src: url('./fonts/ClashDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+
+  src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./fonts/Poppins-Light.ttf') format('ttf');
+  font-weight: 300; /* This covers the variable range */
+
+  src: url('./fonts/Poppins-Regular.ttf') format('ttf');
+  font-weight: 400;
+
+  src: url('./fonts/Poppins-Medium.ttf') format('ttf');
+  font-weight: 500;
+
+  font-display: swap;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
-
-/* ClashDisplay Font */
-/* @import "./fonts/css/clash-display.css"; */
-/* Poppins Font */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 @layer base {
     h1,h2,h3,h4 {
       @apply font-heading;
     }
     b, strong, i, em, u, strike, small, big, sub, sup, mark, button, p, span, h5 {
-      @apply font-secondary;
+      @apply font-paragraph;
     }
     table, th, td, caption {
-      @apply font-secondary;
+      @apply font-paragraph;
     }
   }
 
-  @font-face {
-    font-family: 'ClashDisplay';
-  
-    src: url('./fonts/ClashDisplay-Variable.woff2') format('woff2'),
-         url('./fonts/ClashDisplay-Variable.woff') format('woff'),
-         url('./fonts/ClashDisplay-Variable.ttf') format('truetype');
-    font-weight: 200 700; /* This covers the variable range */
-  
-    src: url('./fonts/ClashDisplay-Extralight.woff2') format('woff2');
-    font-weight: 200;
-  
-    src: url('./fonts/ClashDisplay-Light.woff2') format('woff2');
-    font-weight: 300;
-  
-    src: url('./fonts/ClashDisplay-Regular.woff2') format('woff2');
-    font-weight: 400;
-  
-    src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2');
-    font-weight: 500;
-  
-    src: url('./fonts/ClashDisplay-Semibold.woff2') format('woff2');
-    font-weight: 600;
-  
-    src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2');
-    font-weight: 700;
-  
-    font-display: swap;
-    font-style: normal;
-  }

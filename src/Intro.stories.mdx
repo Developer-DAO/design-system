@@ -10,10 +10,32 @@ parameters={{
 
 <style>
   {`
+  
     `}
 </style>
 
 
-# D_D Desing System
+import { Body3, Button, Headline1, Headline2 } from "./components";
+import { StarsBgImage } from "./illustrations";
 
-D_D Design Language and documentation for the ui open language of the community to be used within the .
+<article className="h-screen overflow-hidden relative">
+	<div
+		className="absolute top-0 h-[700vh] left-0 w-screen
+      z-0"
+	>
+		<StarsBgImage className="w-full h-full"></StarsBgImage>
+	</div>
+
+	<div className="z-30 absolute top-0 w-full">
+		{/* HEADING */}
+		<section className="z-30 flex min-h-screen flex-col items-center text-white">
+			<Headline1 className="font-heading">{"D_D"}</Headline1>
+			<Headline2 className="font-heading">{"DESIGN SYSTEM"}</Headline2>
+			<Body3 className="font-secondary">
+				{
+					"Start building"
+				}
+			</Body3>
+		</section>
+	</div>
+</article>

@@ -16,3 +16,9 @@ export const borderRadius = {
     lg: "24px",
     xl: "48px",
   }
+
+  export const backgroundOpacity = {
+    '08': '0.08',
+    '15': '0.15',
+    '38': '0.38',
+  }

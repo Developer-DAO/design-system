@@ -3,6 +3,7 @@ import React from "react";
 
 interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	color?: string;
+	className?: string;
 }
 
 const Body2 = ({ color, children, className, ...props }: ParagraphProps) => {
