@@ -70,9 +70,10 @@ const SVGGradientBorder: React.FC<SVGGradientBorderProps> = ({
 	);
 };
 
-interface CardProps {
+export interface CardProps {
 	withGradientBorder?: boolean;
-	borderRadius?: "sm" | "md" | "lg" | "full" | "none";
+	customBorderRadius?: "sm" | "md" | "lg" | "full" | "none";
+	noPadding?: boolean;
 	startColor?: string;
 	middleColor?: string;
 	endColor?: string;
@@ -83,7 +84,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({
 	withGradientBorder = false,
-	borderRadius = "none",
+	customBorderRadius,
+	noPadding = false,
 	startColor = "white",
 	middleColor = "gray",
 	endColor = "black",
@@ -91,14 +93,12 @@ const Card: React.FC<CardProps> = ({
 	className,
 	children,
 }) => {
-	const paddingClass = `p-${borderSize + 1}`; // Assuming that 1 unit in tailwind's spacing scale corresponds to 0.25rem
-
 	return (
 		<div
 			className={cx(
-				"relative overflow-hidden p-6",
-				borderRadius && "rounded-" + borderRadius,
-				paddingClass,
+				"relative overflow-hidden",
+				!customBorderRadius && "rounded-lg",
+				!noPadding && "p-6",
 				className,
 			)}
 		>
@@ -109,10 +109,11 @@ const Card: React.FC<CardProps> = ({
 						startColor={startColor}
 						middleColor={middleColor}
 						endColor={endColor}
-						borderRadius={borderRadius}
+						borderRadius={customBorderRadius}
 					/>
 				</div>
 			)}
+
 			{children}
 		</div>
 	);

@@ -7,6 +7,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 	size?: "medium" | "small" | "compact";
 	border?: string;
 	variant?: "primary" | "secondary";
+	icon?: React.ReactElement;
+	iconPosition?: "left" | "right";
 	disabled?: boolean;
 	loading?: boolean;
 }
@@ -17,6 +19,8 @@ const Button: React.FC<ButtonProps> = ({
 	border = "primary-white",
 	size = "medium",
 	variant = "primary",
+	icon,
+	iconPosition = "left", // Default value
 	disabled = false,
 	loading = false,
 	className,
@@ -52,16 +56,16 @@ const Button: React.FC<ButtonProps> = ({
 			: "bg-neutral-600"; // Conditional text color
 
 	const effectClass = cx({
-		"shadow-sm": variant === "primary" && !disabled && !isPressed,
-		"hover:shadow-lg": variant === "primary" && !isPressed && !disabled && !loading,
-		"cursor-default": !disabled && loading,
-		"cursor-not-allowed": disabled,
+		"shadow-3xl ": variant === "primary" && !disabled && !isPressed,
+		" shadow-white/80": variant === "primary" && !isPressed && !disabled && !loading,
+		" cursor-default": !disabled && loading,
+		" cursor-not-allowed": disabled,
 	});
 
 	return (
 		<button
 			className={cx(
-				"flex items-center justify-center w-fit rounded-full gap-2 transition-all border-2",
+				"flex items-center justify-center w-fit rounded-full gap-1 transition-all border-2",
 				sizeClass,
 				textColor,
 				borderColorClasses,
@@ -78,11 +82,13 @@ const Button: React.FC<ButtonProps> = ({
 		>
 			<span
 				className={cx(
-					"flex items-center gap-2 justify-center flex-nowrap whitespace-nowrap overflow-hidden transition-opacity",
+					"flex items-center gap-1 justify-center flex-nowrap whitespace-nowrap overflow-hidden transition-opacity",
 					loading ? "opacity-0" : "opacity-100",
 				)}
 			>
+				{icon && iconPosition === "left" && <span className="mr-1">{icon}</span>}
 				{children ?? label}
+				{icon && iconPosition === "right" && <span className="ml-1">{icon}</span>}
 			</span>
 			<span
 				className={cx(

@@ -4,14 +4,11 @@ export default create({
 	base: "dark",
 
 	// Typography
-	fontBase: '"Poppins", sans-serif',
-	fontCode: "monospace",
+	// fontBase: '"Poppins", sans-serif',
+	// fontCode: "monospace",
 
 	colorPrimary: "#1e1e1f",
 	colorSecondary: "#fff",
-
-	fontBase: '"Poppins", sans-serif',
-	fontCode: "monospace",
 
 	appBg: "#000000",
 	appContentBg: "rgba(0, 0, 0, 1)",

@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+import { ThunderIcon } from "../../icons";
 import Button from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -40,6 +42,23 @@ const meta: Meta<typeof Button> = {
 			name: "Loading",
 			control: "boolean",
 		},
+		icon: {
+			name: "Icon",
+			control: {
+				type: "select",
+				options: {
+					None: null,
+					YourIcon: <ThunderIcon />,
+				},
+			},
+		},
+		iconPosition: {
+			name: "Icon Position",
+			control: {
+				type: "select",
+				options: ["left", "right"],
+			},
+		},
 	},
 };
 
@@ -68,6 +87,28 @@ export const SecondaryButton: ButtonStory = {
 export const DisabledButton: ButtonStory = {
 	args: {
 		disabled: true,
+	},
+	parameters: {
+		// backgrounds: { default: "dark" },
+	},
+};
+
+export const IconLeftButton: ButtonStory = {
+	args: {
+		variant: "primary",
+		icon: <ThunderIcon />,
+		iconPosition: "left",
+	},
+	parameters: {
+		// backgrounds: { default: "dark" },
+	},
+};
+
+export const IconRightButton: ButtonStory = {
+	args: {
+		variant: "primary",
+		icon: <ThunderIcon />,
+		iconPosition: "right",
 	},
 	parameters: {
 		// backgrounds: { default: "dark" },
