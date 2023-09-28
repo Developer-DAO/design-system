@@ -1,5 +1,5 @@
 {
-  "name": "@d_d/ui-components",
+  "name": "@gordo-d/d-d-ui-components",
   "author": "AGΞNCY ΞXPERTS | Gordo",
   "version": "0.1.0",
   "license": "MIT",
@@ -36,7 +36,8 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "tailwindcss": "3.3.3"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.4",
@@ -97,7 +98,7 @@
     "storybook": "^7.0.18",
     "storybook-dark-mode": "^3.0.0",
     "styled-components": "^5.3.9",
-    "tailwindcss": "^3.1.8",
+    
     "ts-loader": "^9.4.2",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "tsdx": "^0.14.1",

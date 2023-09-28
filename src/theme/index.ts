@@ -10,7 +10,7 @@ import * as typography from "./typography";
 
 import { grid } from './grid';
 
-export default {
+export const theme = {
   ...colors,
   ...effects,
   ...icons,

@@ -9,7 +9,6 @@ interface SVGGradientBorderProps {
 	borderRadius?: "sm" | "md" | "lg" | "full" | "none";
 	angle?: number; // Angle in degrees
 }
-
 const SVGGradientBorder: React.FC<SVGGradientBorderProps> = ({
 	strokeWidth = 1,
 	startColor,
@@ -103,7 +102,7 @@ const Card: React.FC<CardProps> = ({
 			)}
 		>
 			{withGradientBorder && (
-				<div className="absolute top-0 left-0 w-full h-full z-10">
+				<div className="absolute  top-0 left-0 w-full h-full z-10">
 					<SVGGradientBorder
 						strokeWidth={borderSize}
 						startColor={startColor}
