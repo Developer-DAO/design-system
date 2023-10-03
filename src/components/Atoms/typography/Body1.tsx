@@ -10,7 +10,7 @@ const Body1 = ({ color, children, className, ...props }: ParagraphProps) => {
 		<p
 			className={cx(
 				"text-base md:text-lg font-medium tracking-wide",
-				color ? `text-${color}` : "text-white",
+				color ? `text-${color}` : "text-primary-white",
 				className,
 			)}
 			{...props}

@@ -45,14 +45,14 @@ const Button: React.FC<ButtonProps> = ({
 		variant === "primary"
 			? "border-primary-white"
 			: variant === "secondary"
-			? `border-neutral-500 hover:border-primary-white`
+			? `border-neutral-600 hover:border-primary-white`
 			: "border-neutral-600"; // Conditional text color
 
 	const backgroundColorClasses =
 		variant === "primary"
 			? "bg-primary-white"
 			: variant === "secondary"
-			? `bg-neutral-700 hover:bg-neutral-700`
+			? `bg-neutral-800 hover:bg-neutral-700`
 			: "bg-neutral-600"; // Conditional text color
 
 	const effectClass = cx({
@@ -65,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			className={cx(
-				"flex items-center justify-center w-fit rounded-full gap-1 transition-all border-2",
+				"flex w-fit items-center justify-center gap-1 rounded-full border-2 tracking-wider transition-all",
 				sizeClass,
 				textColor,
 				borderColorClasses,
@@ -82,7 +82,7 @@ const Button: React.FC<ButtonProps> = ({
 		>
 			<span
 				className={cx(
-					"flex items-center gap-1 justify-center flex-nowrap whitespace-nowrap overflow-hidden transition-opacity",
+					"flex flex-nowrap items-center justify-center gap-1 overflow-hidden whitespace-nowrap transition-opacity",
 					loading ? "opacity-0" : "opacity-100",
 				)}
 			>
@@ -92,11 +92,11 @@ const Button: React.FC<ButtonProps> = ({
 			</span>
 			<span
 				className={cx(
-					"absolute flex items-center justify-center w-full h-full transition-opacity pointer-events-none",
+					"pointer-events-none absolute flex h-full w-full items-center justify-center transition-opacity",
 					loading ? "opacity-100" : "opacity-0",
 				)}
 			>
-				<Spinner className={`w-4 h-4 fill-${border}`} />
+				<Spinner className={`h-4 w-4 fill-${border}`} />
 			</span>
 		</button>
 	);

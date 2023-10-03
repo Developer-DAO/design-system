@@ -1,8 +1,20 @@
-export { default as DDIcon } from "./dd_icon.svg";
-export { default as DDLogoIcon } from "./dd_logo.svg";
-export { default as LinkIcon } from "./link.svg";
 export { default as ArrowLeftIcon } from "./arrowLeft.svg";
 export { default as ArrowRightIcon } from "./arrowRight.svg";
-export { default as ThunderIcon } from "./thunder.svg";
+export { default as ArrowTopRightIcon } from "./arrowTopRight.svg";
+export { default as DDIcon } from "./dd_icon.svg";
+export { default as DDLogoIcon } from "./dd_logo.svg";
+export { default as HeartIcon } from "./heart.svg";
+export { default as LinkIcon } from "./link.svg";
 export { default as StarIcon } from "./star.svg";
+export { default as ThunderGreyIcon } from "./thunderGrey.svg";
+export { default as CodeIcon } from "./code.svg";
+export { default as PeopleIcon } from "./people.svg";
+export { default as DolarIcon } from "./dolar.svg";
+export { default as TicketIcon } from "./ticket.svg";
+export { default as UniHatIcon } from "./uniHat.svg";
+export { default as TwitterIcon } from "./twitter.svg";
+export { default as GithubIcon } from "./github.svg";
+export { default as YoutubeIcon } from "./youtube.svg";
+// export { default as StarsWhiteIcon } from "./starsWhite.svg";
+export { default as ThunderIcon } from "./thunder.svg";
 

@@ -5,6 +5,7 @@ CUSTOM STYLES BUNDLING
 Add custom imports here
  */
 
+ 
 @font-face {
   font-family: 'ClashDisplay';
   src: url('./fonts/ClashDisplay-Variable.woff2') format('woff2'),

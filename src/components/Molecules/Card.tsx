@@ -102,7 +102,7 @@ const Card: React.FC<CardProps> = ({
 			)}
 		>
 			{withGradientBorder && (
-				<div className="absolute  top-0 left-0 w-full h-full z-10">
+				<div className="absolute  left-0 top-0 z-10 h-full w-full">
 					<SVGGradientBorder
 						strokeWidth={borderSize}
 						startColor={startColor}
