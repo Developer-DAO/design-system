@@ -15,6 +15,7 @@ export { default as UniHatIcon } from "./uniHat.svg";
 export { default as TwitterIcon } from "./twitter.svg";
 export { default as GithubIcon } from "./github.svg";
 export { default as YoutubeIcon } from "./youtube.svg";
+export { default as HamburguerIcon } from "./hamburguer.svg";
 // export { default as StarsWhiteIcon } from "./starsWhite.svg";
 export { default as ThunderIcon } from "./thunder.svg";
 

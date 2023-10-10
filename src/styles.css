@@ -4,8 +4,8 @@ CUSTOM STYLES BUNDLING
 /* 
 Add custom imports here
  */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
- 
 @font-face {
   font-family: 'ClashDisplay';
   src: url('./fonts/ClashDisplay-Variable.woff2') format('woff2'),
@@ -30,24 +30,6 @@ Add custom imports here
 
   src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2');
   font-weight: 700;
-
-  font-display: swap;
-  font-style: normal;
-
-}
-
-
-@font-face {
-  font-family: 'Poppins';
-
-  src: url('./fonts/Poppins-Light.ttf') format('ttf');
-  font-weight: 300; /* This covers the variable range */
-
-  src: url('./fonts/Poppins-Regular.ttf') format('ttf');
-  font-weight: 400;
-
-  src: url('./fonts/Poppins-Medium.ttf') format('ttf');
-  font-weight: 500;
 
   font-display: swap;
   font-style: normal;

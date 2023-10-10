@@ -9,7 +9,7 @@ const BodyHeadline = ({ color, children, className, ...props }: HeadlineProps) =
 	return (
 		<h5
 			className={cx(
-				"text-xl md:text-head tracking-wide line-clamp-2 font-semibold",
+				"md:text-head line-clamp-2 text-xl font-semibold tracking-wide",
 				color && `text-${color}`,
 				className,
 			)}

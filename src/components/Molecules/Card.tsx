@@ -76,6 +76,7 @@ export interface CardProps {
 	startColor?: string;
 	middleColor?: string;
 	endColor?: string;
+	blur?: number;
 	borderSize?: number;
 	className?: string;
 	children?: React.ReactNode;
@@ -88,14 +89,16 @@ const Card: React.FC<CardProps> = ({
 	startColor = "white",
 	middleColor = "gray",
 	endColor = "black",
+	blur = 2,
 	borderSize = 2,
 	className,
 	children,
 }) => {
 	return (
 		<div
+			style={{ backdropFilter: `blur(${blur.toString()}px)` }}
 			className={cx(
-				"relative overflow-hidden",
+				"border-primary-grey/20 relative overflow-hidden",
 				!customBorderRadius && "rounded-lg",
 				!noPadding && "p-6",
 				className,
