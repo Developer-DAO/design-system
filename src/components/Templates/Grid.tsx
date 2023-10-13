@@ -11,10 +11,10 @@ const Grid = ({ id, children, className }: GridProps) => (
 	<section
 		id={id}
 		className={cx(
-			"flex flex-col w-full md:w-auto md:grid grid-flow-row grid-cols-1 auto-rows-auto gap-y-md",
+			"gap-y-md flex w-full grid-flow-row auto-rows-auto grid-cols-1 flex-col md:grid md:w-auto",
 			"lg:grid-cols-lg lg:gap-lg",
 			"xl:grid-cols-xl",
-			"z-10 mt-40 m-min3",
+			"m-min3 z-10 mt-40",
 			className,
 		)}
 	>

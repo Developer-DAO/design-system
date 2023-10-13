@@ -6,4 +6,4 @@ export * from "./hooks/useScreen";
 export * from "./icons";
 export * from "./illustrations";
 export * from "./theme";
-export * as utils from "./utils";
+export * from "./utils";

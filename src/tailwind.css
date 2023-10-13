@@ -5,6 +5,7 @@
 @layer base {
     h1,h2,h3,h4 {
       @apply font-heading;
+      @apply font-bold;
     }
     b, strong, i, em, u, strike, small, big, sub, sup, mark, button, p, span, h5 {
       @apply font-paragraph;

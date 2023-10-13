@@ -1,2 +1,3 @@
 import Grid from "./Grid";
-export { Grid };
+import TopBarGrid from "./TopBarGrid";
+export { Grid, TopBarGrid };
