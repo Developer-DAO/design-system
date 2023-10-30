@@ -7,12 +7,12 @@ interface HeadlineProps extends HTMLAttributes<HTMLHeadingElement> {
 
 const HeadlineBasic = ({ color, children, className, ...props }: HeadlineProps) => {
 	return (
-		<h4
+		<h5
 			{...props}
 			className={cx("text-lg md:text-xl font-bold", color && `text-${color}`, className)}
 		>
 			{children}
-		</h4>
+		</h5>
 	);
 };
 
